@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File to URL - 临时文件转链接</title>
+    <!-- 引入苹果风格的基础样式 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 网站主标题 -->
+    <header class="site-header">
+        <h1 id="site-title">File to URL</h1>
+        <!-- 语言切换按钮 -->
+        <div class="lang-switch">
+            <button id="lang-en" class="lang-btn active">EN</button>
+            <button id="lang-zh" class="lang-btn">中文</button>
+        </div>
+    </header>
+
+    <!-- 文件上传区域 -->
+    <main class="main-content">
+        <section class="upload-section">
+            <h2 id="upload-title">Upload your files</h2>
+            <!-- 线路选择控件 -->
+            <div class="line-switch">
+                <span id="line-label">线路：</span>
+                <button class="line-btn active" id="line-1">线路1</button>
+                <button class="line-btn" id="line-2">线路2</button>
+                <button class="line-btn" id="line-3">线路3</button>
+            </div>
+            <!-- 拖拽上传区域 -->
+            <div id="drop-area" class="drop-area">
+                <p id="drop-text">Drag & drop files here or click to select</p>
+                <input type="file" id="file-input" multiple hidden>
+                <button id="select-files" class="apple-btn">Select Files</button>
+            </div>
+            <!-- 上传进度条 -->
+            <div id="upload-progress" class="upload-progress" style="display:none;"></div>
+            <!-- 错误提示 -->
+            <div id="error-message" class="error-message"></div>
+        </section>
+
+        <!-- 上传历史记录区 -->
+        <section class="history-section">
+            <h2 id="history-title">Upload History</h2>
+            <ul id="history-list" class="history-list">
+                <!-- 历史记录项将由JS动态生成 -->
+            </ul>
+        </section>
+    </main>
+
+    <!-- 脚本文件 -->
+    <script src="main.js"></script>
+</body>
+</html> 

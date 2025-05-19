@@ -1,0 +1,236 @@
+/* 全局基础样式 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif; /* 苹果风字体 */
+    background: #f8f9fa; /* 浅灰背景 */
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+/* 网站主标题区域 */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 24px 16px 24px;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+#site-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* 语言切换按钮 */
+.lang-switch {
+    display: flex;
+    gap: 8px;
+}
+.lang-btn {
+    background: #f2f2f7;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 16px;
+    font-size: 1rem;
+    color: #222;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.lang-btn.active,
+.lang-btn:hover {
+    background: #0071e3;
+    color: #fff;
+}
+
+/* 主内容区 */
+.main-content {
+    max-width: 600px;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+
+/* 上传区域 */
+.upload-section {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 1px solid #e5e5e5;
+    padding: 32px 24px 24px 24px;
+    margin-bottom: 32px;
+}
+#upload-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+.drop-area {
+    border: 2px dashed #cfd8dc;
+    border-radius: 14px;
+    background: #f4f6f8;
+    padding: 36px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    margin-bottom: 18px;
+}
+.drop-area:hover {
+    border-color: #0071e3;
+}
+#select-files {
+    margin-top: 12px;
+}
+
+/* 苹果风按钮样式 */
+.apple-btn {
+    background: #0071e3;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.apple-btn:hover {
+    background: #005bb5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* 上传进度条 */
+.upload-progress {
+    height: 8px;
+    background: #e5e5e5;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+.upload-progress-bar {
+    height: 100%;
+    background: #0071e3;
+    width: 0;
+    transition: width 0.3s;
+}
+
+/* 错误提示 */
+.error-message {
+    color: #d32f2f;
+    font-size: 1rem;
+    margin-top: 8px;
+    min-height: 24px;
+}
+
+/* 上传历史区 */
+.history-section {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 1px solid #e5e5e5;
+    padding: 28px 24px 20px 24px;
+}
+#history-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+.history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.history-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 10px 0;
+    gap: 8px;
+}
+.history-item:last-child {
+    border-bottom: none;
+}
+.history-filename {
+    flex: 2 1 120px;
+    font-size: 1rem;
+    color: #333;
+    word-break: break-all;
+}
+.history-url {
+    flex: 3 1 180px;
+    font-size: 0.98rem;
+    color: #0071e3;
+    word-break: break-all;
+    margin-right: 8px;
+}
+.history-actions {
+    display: flex;
+    gap: 6px;
+}
+.copy-btn, .delete-btn {
+    background: #f2f2f7;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 12px;
+    font-size: 0.95rem;
+    color: #222;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.copy-btn:hover {
+    background: #0071e3;
+    color: #fff;
+}
+.delete-btn:hover {
+    background: #d32f2f;
+    color: #fff;
+}
+.history-expire {
+    font-size: 0.92rem;
+    color: #888;
+    margin-left: 8px;
+}
+
+/* 响应式布局 */
+@media (max-width: 700px) {
+    .main-content {
+        max-width: 98vw;
+        padding: 0 4vw;
+    }
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+/* 线路选择控件样式 */
+.line-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+#line-label {
+    font-size: 1rem;
+    color: #555;
+}
+.line-btn {
+    background: #f2f2f7;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 18px;
+    font-size: 1rem;
+    color: #222;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.line-btn.active,
+.line-btn:hover {
+    background: #0071e3;
+    color: #fff;
+} 
