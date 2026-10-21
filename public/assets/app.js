@@ -21,7 +21,7 @@ function localize(){
  document.querySelectorAll('a[href^="/zh/"],a[href^="/en/"]').forEach(a=>a.setAttribute('href',a.getAttribute('href').replace(/^\/(zh|en)\//,'/'+lang+'/')));
  $('locale').textContent=lang==='zh'?'EN':'中文';setAuth();renderQueue();renderRecords();
 }
-$('locale').onclick=()=>{lang=lang==='zh'?'en':'zh';history.replaceState(null,'','/'+lang+'/'+location.hash);localize();};
+$('locale').onclick=()=>{lang=lang==='zh'?'en':'zh';history.replaceState(null,'','/'+lang+'/pdf-to-link/'+location.hash);localize();};
 const openLogin=()=>{$('loginError').textContent='';$('loginDialog').showModal();$('password').focus();};
 $('closeLogin').onclick=()=>$('loginDialog').close();
 $('loginForm').onsubmit=async e=>{e.preventDefault();const button=e.submitter;button.disabled=true;try{

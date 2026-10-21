@@ -1,12 +1,40 @@
 {
- "name":"seller-pdf-links",
- "account_id":"63fbec92216620eb453d0def6257e0b8",
- "main":"src/worker.js",
- "compatibility_date":"2026-10-20",
- "compatibility_flags":["nodejs_compat"],
- "workers_dev":true,
- "assets":{"directory":"./public","binding":"ASSETS","run_worker_first":true},
- "vars":{"AWS_REGION":"us-east-2","S3_BUCKET":"pdftourl.online"},
- "d1_databases":[{"binding":"DB","database_name":"seller-pdf-links-db","database_id":"062276f3-2f27-4dd2-bb7a-10f6400d8776","migrations_dir":"migrations"}],
- "observability":{"enabled":false}
+  "name": "seller-pdf-links",
+  "account_id": "63fbec92216620eb453d0def6257e0b8",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-20",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "workers_dev": true,
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "vars": {
+    "AWS_REGION": "us-east-2",
+    "S3_BUCKET": "pdftourl.online"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "seller-pdf-links-db",
+      "database_id": "062276f3-2f27-4dd2-bb7a-10f6400d8776",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "observability": {
+    "enabled": false
+  },
+  "routes": [
+    {
+      "pattern": "kjamz.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.kjamz.com",
+      "custom_domain": true
+    }
+  ]
 }
