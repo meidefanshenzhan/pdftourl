@@ -26,3 +26,6 @@ Object.assign(strings.en,{intro:'Amazon product documents require a direct-downl
 
 Object.assign(strings.zh,{intro:'亚马逊产品文档需要可直接下载的 PDF 链接，普通分享页可能无法读取。上传你的说明书，生成可用于「合规媒体来源位置」提交的文件直链。也适用于日常 PDF 转链接与分享。'});
 Object.assign(strings.en,{intro:'Amazon product documents need a directly downloadable PDF link. A sharing page may not be accessible. Upload your manual to create a direct file link for the Compliance Media Source Location field. Also suitable for everyday PDF-to-link conversion and sharing.'});
+
+Object.assign(strings.zh,{whyIntro:'亚马逊产品文档需要可直接下载的 PDF URL。本站使用 Amazon 云服务生成 amazonaws.com 域名下的文件直链，并检查无需登录即可下载。其他 PDF 转链接网站若提供的是分享页、需要登录或会到期的链接，可能不适合用于提交。使用 Amazon 云服务不代表官方认证，最终仍以平台要求和审核为准。'});
+Object.assign(strings.en,{whyIntro:'Amazon product documents require a direct-download PDF URL. We use Amazon cloud services to create file links under amazonaws.com and check that they download without sign-in. Links from other PDF-to-link tools may not be suitable for submission if they open a sharing page, require sign-in, or expire. Using Amazon cloud services does not imply official certification; platform requirements and review still apply.'});
