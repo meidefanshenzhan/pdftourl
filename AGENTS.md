@@ -20,3 +20,5 @@ For every new feature or public page, run the GEO/SEO check before release and v
 
 ## Release notes
 - Record actual shipped tools and user-facing changes in scripts/release-notes.mjs in both languages when releasing. Do not list planned features as released.
+
+- Release entries use site-wide major.minor.patch versions: increment minor for a new tool, patch for improvements, and major for a substantial incompatible change. Keep bilingual versions and actual publication dates consistent. Existing history was retrospectively numbered from v1.0.0 (PDF to Link, 2026-10-21).
