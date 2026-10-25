@@ -64,3 +64,14 @@ wrangler deploy
 `smoke-test`会在指定环境创建一份无敏感信息的测试PDF并保留。记录在 `.local/smoke-results.json`；默认测试线上，指定TEST_BASE才测本机。
 
 秘密配置与站主密码已注入新Worker。再次部署不需要在源码写入秘密。
+
+
+## Word Counter / 词频统计（2026-10-25）
+
+- 页面：`/zh/word-counter/` 与 `/en/word-counter/`。
+- 在浏览器本地统计词数、字符、UTF-8 字节与 1/2/3-gram 词频；支持全量结果、前 N、查找、虚词/排除词和 CSV/TXT。
+- 100 行分页只影响显示，导出包含当前筛选的全部结果。密度分母不受筛选影响。
+- 草稿保存默认关闭，仅在用户同意时写入本工具 localStorage。文本不上传后台，不影响 PDF 上传规则。
+- 上限为 500,000 Unicode 码点；英文可读性与时间为估计。
+- 构建：`npm run build`；单元测试：`npm test`；浏览器验收：`node scripts/check-word-counter-ui.mjs`（默认本地 8787，可设 CHECK_BASE 为正式站点）。
+- 发布前 `npm run check:geo`，发布后 `node scripts/check-geo.mjs --live`；公开页面由 `scripts/site-pages.mjs` 统一管理。
