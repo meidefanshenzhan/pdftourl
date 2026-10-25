@@ -14,3 +14,6 @@ For every new feature or public page, run the GEO/SEO check before release and v
 ## UI consistency
 - Unless the owner explicitly requests otherwise, UI and copy changes apply to both Chinese and English.
 - Use the shared renderSiteFooter in scripts/site-shell.mjs for every public page; keep tool-specific explanations out of the site-wide footer.
+
+## Product copy
+- Describe available capabilities and actual uses. Do not add FAQ entries or dedicated copy listing unimplemented features merely to emphasize that they are unavailable. Apply this principle to both languages and future pages. Keep explanations of actual matching rules and necessary usage constraints accurate.
