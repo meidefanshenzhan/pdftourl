@@ -6,9 +6,9 @@ Design: shared footer Changelog link has a small green dot + 有更新 / New lab
 
 Only substantive features/improvements get public release entries; small copy/spacing changes need not. Add v1.2.2 on 2026-10-26 for unread update marker, no separate naming entry.
 
-- [ ] Test read-state/version change/storage failure.
-- [ ] Implement shared footer module and styling; integrate localized display name.
-- [ ] Build/test/GEO; browser unread/read/new-release/storage-blocked/multi-tab/locale tests.
-- [ ] Fresh review, preserve remote history, deploy existing worker and verify live.
+- [x] Test read-state/version change/storage failure.
+- [x] Implement shared footer module and styling; integrate localized display name.
+- [x] Build/test/GEO; browser unread/read/new-release/storage-blocked/multi-tab/locale tests.
+- [x] Fresh review, preserve remote history, deploy existing worker and verify live.
 
 Checkpoint .local/unread-updates-release/. Previous production d42248e3-1791-439b-bb90-ed0e4a1a86a2. Keep raw deployment and verification evidence. No user text stored by marker.
