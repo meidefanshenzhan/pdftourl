@@ -22,7 +22,7 @@ function localize(){
  const zh=lang==='zh';
  document.querySelectorAll('.contact-nav').forEach(a=>a.textContent=(zh?'联系我们':'Contact Us')+' ↗');
  document.querySelectorAll('footer a[href$="/contact/"]').forEach(a=>a.textContent=zh?'联系我们':'Contact Us');
- document.querySelectorAll('footer a[href$="/changelog/"]').forEach(a=>a.textContent=zh?'更新日志':'Changelog');
+ document.querySelectorAll('footer .changelog-label').forEach(a=>a.textContent=zh?'更新日志':'Changelog');
  const foot=document.querySelector('footer>div');if(foot)foot.textContent=zh?'独立开发的跨境卖家工具，与 Amazon 无隶属或背书关系。':'Independent seller tools. Not affiliated with or endorsed by Amazon.';
  const footNav=document.querySelector('.footer-links');if(footNav)footNav.setAttribute('aria-label',zh?'站点信息':'Site information');
  $('locale').textContent=lang==='zh'?'EN':'中文';setAuth();renderQueue();renderRecords();

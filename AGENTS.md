@@ -19,6 +19,8 @@ For every new feature or public page, run the GEO/SEO check before release and v
 - Describe available capabilities and actual uses. Do not add FAQ entries or dedicated copy listing unimplemented features merely to emphasize that they are unavailable. Apply this principle to both languages and future pages. Keep explanations of actual matching rules and necessary usage constraints accurate.
 
 ## Release notes
-- Record actual shipped tools and user-facing changes in scripts/release-notes.mjs in both languages when releasing. Do not list planned features as released.
+- Record substantive shipped tools and user-facing changes in scripts/release-notes.mjs in both languages when releasing. Do not list planned features as released.
 
 - Release entries use site-wide major.minor.patch versions: increment minor for a new tool, patch for improvements, and major for a substantial incompatible change. Keep bilingual versions and actual publication dates consistent. Existing history was retrospectively numbered from v1.0.0 (PDF to Link, 2026-10-21).
+
+- Do not create individual public release entries for minor wording, spacing or SEO metadata edits. New tools, material improvements and quiet update notifications belong in the changelog. The update indicator uses only a local browser read-release ID; no popup or visitor identification.

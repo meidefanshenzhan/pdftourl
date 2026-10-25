@@ -1,5 +1,9 @@
 // Add actual shipped changes here, newest first. Dates are publication dates.
 export const releaseNotes=[{
+ date:'2026-10-26',version:'1.2.2',id:'2026-10-26-quiet-updates',
+ zh:{title:'轻量更新提示',items:[{text:'更新日志旁新增“有更新”标记；查看后自动标记已读，方便发现新工具与改进。',path:'changelog/'}]},
+ en:{title:'Quiet update indicator',items:[{text:'A small New badge beside Changelog highlights updates and clears when you read them.',path:'changelog/'}]}
+},{
  date:'2026-10-25',version:'1.2.1',id:'2026-10-25-site-update',
  zh:{title:'站点体验更新',items:[
   {text:'联系页统一为 KJAMZ，方便反馈各项工具的问题与建议。',path:'contact/'},

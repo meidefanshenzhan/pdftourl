@@ -84,7 +84,7 @@ export const copy={
   "en": {
     "title": "Remove Duplicate Lines & Words Online | KJAMZ",
     "heading": "Remove duplicate lines or words.",
-    "tool": "Text Dedupe",
+    "tool": "Duplicate Text Remover",
     "description": "Remove duplicate lines or words online while keeping first-occurrence order. Clean keyword, ASIN, SKU and URL lists for marketplace work. Copy or export TXT / CSV.",
     "home": "Tools",
     "contact": "Contact Us",
