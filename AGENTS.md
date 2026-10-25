@@ -10,3 +10,7 @@ For every new feature or public page, run the GEO/SEO check before release and v
 - Do not add login, MCP, OAuth placeholders or payment protocols solely for scanner points.
 - Record run/session/checkpoints and rollback before long releases. Inspect current remote state before uploading and preserve old history.
 - If using isitagentready.com, save actual output and time. Distinguish raw API checks, readiness level and browser-confirmed default-profile score. Never call it Google's SEO score or a ranking guarantee.
+
+## UI consistency
+- Unless the owner explicitly requests otherwise, UI and copy changes apply to both Chinese and English.
+- Use the shared renderSiteFooter in scripts/site-shell.mjs for every public page; keep tool-specific explanations out of the site-wide footer.
