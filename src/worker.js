@@ -1,3 +1,4 @@
+import {seoHashes} from './seo-hashes.js';
 import {MAX_BYTES,validatePdf,makeObjectKey,sha256,readLimited} from './core.js';
 import {createSession,validSession,sessionCookie,cookie,samePassword} from './auth.js';
 import {identifyVisitor,visitorCookie,reserveUpload,releaseUpload,remainingUploads} from './visitors.js';
@@ -67,11 +68,12 @@ export default {async fetch(req,env){
  const url=new URL(req.url),path=url.pathname;
  try{
   if(!path.startsWith('/api/')){
+   if(['GET','HEAD'].includes(req.method)&&['www.kjamz.com','seller-pdf-links.zheciyaojizhuwqw.workers.dev'].includes(url.hostname))return Response.redirect('https://kjamz.com'+path+url.search,301);
    if(path==='/')return Response.redirect(url.origin+'/zh/',302);
    const r=await env.ASSETS.fetch(req);const h=new Headers(r.headers);
    h.set('X-Content-Type-Options','nosniff');h.set('Referrer-Policy','strict-origin-when-cross-origin');
    const formAction=path.includes('/contact/')?"'self' https://formsubmit.co":"'self'";
-   h.set('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action "+formAction);
+   h.set('Content-Security-Policy',"default-src 'self'; script-src 'self' "+seoHashes+"; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action "+formAction);
    return new Response(r.body,{status:r.status,headers:h});
   }
   if(!['GET','HEAD'].includes(req.method)&&req.headers.get('origin')&&req.headers.get('origin')!==url.origin)return json({error:'ORIGIN'},403);
