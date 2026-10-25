@@ -47,7 +47,7 @@ Files: scripts/site-pages.mjs; scripts/build-home.mjs; scripts/build-seo.mjs; sc
 - [x] Read current remote branch and Cloudflare deployment; save run/checkpoint/backup/rollback.
 - [x] Request independent branch review, fix substantive findings and rerun affected checks.
 - [x] Sync verified source to existing GitHub branch, no secrets.
-- [ ] Deploy existing Worker once, verify canonical hostname and run live GEO; explicitly record host-network limitations.
-- [ ] Verify live tool/download behavior, save evidence/release report and final links.
+- [x] Deploy existing Worker once, verify canonical hostname and run live GEO; explicitly record host-network limitations.
+- [x] Verify live tool/download behavior, save evidence/release report and final links.
 
 Execution: user explicitly approved development and deployment; proceed inline without another approval loop.
