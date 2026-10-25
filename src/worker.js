@@ -68,6 +68,8 @@ export default {async fetch(req,env){
  const url=new URL(req.url),path=url.pathname;
  try{
   if(!path.startsWith('/api/')){
+   const oldDedupe=path.match(/^\/(zh|en)\/text-dedupe(?:\/|\/index\.html)?$/);
+   if(oldDedupe&&['GET','HEAD'].includes(req.method))return Response.redirect('https://kjamz.com/'+oldDedupe[1]+'/remove-duplicates/'+url.search,301);
    if(['GET','HEAD'].includes(req.method)&&['www.kjamz.com','seller-pdf-links.zheciyaojizhuwqw.workers.dev'].includes(url.hostname))return Response.redirect('https://kjamz.com'+path+url.search,301);
    if(path==='/')return Response.redirect(url.origin+'/zh/',302);
    const r=await env.ASSETS.fetch(req);const h=new Headers(r.headers);

@@ -7,7 +7,7 @@ const ready=()=>page.waitForFunction(()=>document.documentElement.dataset.dedupe
 async function download(id){const [d]=await Promise.all([page.waitForEvent('download'),page.locator(id).click()]);return fs.readFile(await d.path(),'utf8');}
 try{
  for(const lang of ['zh','en']){
-  await page.goto(base+'/'+lang+'/text-dedupe/');await ready();
+  await page.goto(base+'/'+lang+'/remove-duplicates/');await ready();
   await page.locator('#ddInput').fill('Hiking backpack\nwaterproof backpack\nhiking backpack ');await ready();
   assert.equal(await page.locator('#ddOutput').inputValue(),'Hiking backpack\nwaterproof backpack');
   assert.equal(await page.locator('#dd-removed').innerText(),'1');

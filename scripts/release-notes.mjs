@@ -14,9 +14,9 @@ export const releaseNotes=[{
 },{
  date:'2026-10-25',version:'1.2.0',id:'2026-10-25-text-dedupe',
  zh:{title:'文本去重上线',items:[
-  {text:'按整行或单词删除重复项，支持大小写选项与 TXT / CSV 导出。',path:'text-dedupe/'}]},
+  {text:'按整行或单词删除重复项，支持大小写选项与 TXT / CSV 导出。',path:'remove-duplicates/'}]},
  en:{title:'Text Dedupe launched',items:[
-  {text:'Remove duplicate lines or words, with case options and TXT / CSV exports.',path:'text-dedupe/'}]}
+  {text:'Remove duplicate lines or words, with case options and TXT / CSV exports.',path:'remove-duplicates/'}]}
 },{
  date:'2026-10-25',version:'1.1.0',id:'2026-10-25-word-counter',
  zh:{title:'词频统计上线',items:[
