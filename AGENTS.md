@@ -17,3 +17,6 @@ For every new feature or public page, run the GEO/SEO check before release and v
 
 ## Product copy
 - Describe available capabilities and actual uses. Do not add FAQ entries or dedicated copy listing unimplemented features merely to emphasize that they are unavailable. Apply this principle to both languages and future pages. Keep explanations of actual matching rules and necessary usage constraints accurate.
+
+## Release notes
+- Record actual shipped tools and user-facing changes in scripts/release-notes.mjs in both languages when releasing. Do not list planned features as released.
