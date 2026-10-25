@@ -1,7 +1,7 @@
 import {chromium} from 'playwright';import fs from 'node:fs/promises';import assert from 'node:assert/strict';
 const dir='.local/word-counter-release-2026-10-25';const browser=await chromium.launch({channel:'chrome',headless:true});const ctx=await browser.newContext({acceptDownloads:true});const page=await ctx.newPage({viewport:{width:1440,height:1000}});const errors=[],requests=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text())});page.on('request',r=>requests.push({url:r.url(),method:r.method(),body:r.postData()}));
 const base=process.env.CHECK_BASE||'http://127.0.0.1:8787';
-async function wait(){await page.waitForFunction(()=>document.querySelector('#wcStatus').textContent==='Updated'||document.querySelector('#wcStatus').textContent==='已更新');}
+async function wait(){await page.waitForFunction(()=>document.documentElement.dataset.wcReady==='true'&&(document.querySelector('#wcStatus').textContent==='Updated'||document.querySelector('#wcStatus').textContent==='已更新'));}
 async function downloaded(id){const d=page.waitForEvent('download');await page.locator(id).click();const download=await d;const file=await download.path();return {data:await fs.readFile(file,'utf8'),name:download.suggestedFilename()};}
 try{
 await page.goto(base+'/en/word-counter/');await wait();assert.equal(await page.locator('#stat-words').innerText(),'0');assert.equal(await page.locator('#wcCsv').isDisabled(),true);
