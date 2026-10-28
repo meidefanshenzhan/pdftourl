@@ -1,5 +1,9 @@
 // Add actual shipped changes here, newest first. Dates are publication dates.
 export const releaseNotes=[{
+ date:'2026-10-28',version:'1.3.0',id:'2026-10-28-word-merge',
+ zh:{title:'Word Merge 关键词组合上线',items:[{text:'批量组合两组或三组词表，支持顺序、连接符、前后缀、去重与 TXT / CSV 导出。',path:'word-merge/'}]},
+ en:{title:'Word Merge launched',items:[{text:'Combine two or three word lists with order options, separators, affixes, deduplication and TXT / CSV exports.',path:'word-merge/'}]}
+},{
  date:'2026-10-26',version:'1.2.2',id:'2026-10-26-quiet-updates',
  zh:{title:'轻量更新提示',items:[{text:'更新日志旁新增“有更新”标记；查看后自动标记已读，方便发现新工具与改进。',path:'changelog/'}]},
  en:{title:'Quiet update indicator',items:[{text:'A small New badge beside Changelog highlights updates and clears when you read them.',path:'changelog/'}]}
