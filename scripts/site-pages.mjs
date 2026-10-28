@@ -5,5 +5,6 @@ export const sitePages=['zh','en'].flatMap(lang=>[
  {path:`/${lang}/remove-duplicates/`,lang,type:'dedupe'},
  {path:`/${lang}/word-merge/`,lang,type:'merge'},
  {path:`/${lang}/changelog/`,lang,type:'changelog'},
+ {path:`/${lang}/bookmarks/`,lang,type:'bookmarks'},
  {path:`/${lang}/contact/`,lang,type:'contact'}
 ]);

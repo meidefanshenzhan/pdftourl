@@ -1,5 +1,9 @@
 // Add actual shipped changes here, newest first. Dates are publication dates.
 export const releaseNotes=[{
+ date:'2026-10-28',version:'1.3.1',id:'2026-10-28-tool-bookmarks',
+ zh:{title:'新增工具收藏',items:[{text:'页脚新增第三方工具收藏入口，方便随时打开常用外部工具。',path:'bookmarks/'}]},
+ en:{title:'Tool bookmarks added',items:[{text:'A quiet footer link opens a collection of useful third-party tools.',path:'bookmarks/'}]}
+},{
  date:'2026-10-28',version:'1.3.0',id:'2026-10-28-word-merge',
  zh:{title:'Word Merge 关键词组合上线',items:[{text:'批量组合两组或三组词表，支持顺序、连接符、前后缀、去重与 TXT / CSV 导出。',path:'word-merge/'}]},
  en:{title:'Word Merge launched',items:[{text:'Combine two or three word lists with order options, separators, affixes, deduplication and TXT / CSV exports.',path:'word-merge/'}]}
