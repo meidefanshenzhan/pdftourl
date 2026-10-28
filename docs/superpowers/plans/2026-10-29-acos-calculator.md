@@ -10,10 +10,10 @@ Compute total non-ad cost, contribution M=price-cost; positive M => break-even A
 
 UI: bilingual two-column input/results, sample/clear, cost breakdown, live results, positive/break-even/loss notices, optional target caps, CSV/TXT exports with same inputs/assumptions. Existing shell/footer/quiet updates, own-page nav, mobile stack. Positive feature copy, actual mathematical edge warnings only. No data uploaded/stored. Original FAQ/formulas with official sources.
 
-- [ ] Failing tests: standard sample, percent/amount commission equivalence, CVR0, CPC0, zero/negative margin, unattainable targets, blank/invalid/limits, safe export.
-- [ ] Implement core and localized controller/generator/CSS.
-- [ ] Home card/page registry/SEO/CSP/sitemap/hreflang, v1.4.0 released entry2026-10-29.
-- [ ] Build/test/GEO; desktop/mobile, edge states/export/no transmission; independent source review.
-- [ ] Inspect remote, upload preserving history, deploy existing worker, live validation/report/rollback.
+- [x] Failing tests: standard sample, percent/amount commission equivalence, CVR0, CPC0, zero/negative margin, unattainable targets, blank/invalid/limits, safe export.
+- [x] Implement core and localized controller/generator/CSS.
+- [x] Home card/page registry/SEO/CSP/sitemap/hreflang, v1.4.0 released entry2026-10-29.
+- [x] Build/test/GEO; desktop/mobile, edge states/export/no transmission; independent source review.
+- [x] Inspect remote, upload preserving history, deploy existing worker, live validation/report/rollback.
 
 Run acos-2026-10-29; backup/checkpoint .local/acos-release/. Prior source/HTML/package/hash snapshots. Previous production89c2fc37-b612-453d-8249-0de29dae7970 (confirm deployments-before). No PDF backend, visitor quota, credentials or crawler training preferences altered.
