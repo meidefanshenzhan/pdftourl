@@ -1,5 +1,9 @@
 // Add actual shipped changes here, newest first. Dates are publication dates.
 export const releaseNotes=[{
+ date:'2026-10-29',version:'1.4.0',id:'2026-10-29-advertising-calculator',
+ zh:{title:'广告盈亏计算器上线',items:[{text:'输入售价、单件费用与转化率，测算盈亏平衡 ACOS、CPC 上限和广告后利润，支持目标利润与导出。',path:'acos-calculator/'}]},
+ en:{title:'Advertising Calculator launched',items:[{text:'Calculate break-even ACOS, CPC limits and profit after ads from unit costs and conversion rate, with profit targets and exports.',path:'acos-calculator/'}]}
+},{
  date:'2026-10-28',version:'1.3.1',id:'2026-10-28-tool-bookmarks',
  zh:{title:'新增工具收藏',items:[{text:'页脚新增第三方工具收藏入口，方便随时打开常用外部工具。',path:'bookmarks/'}]},
  en:{title:'Tool bookmarks added',items:[{text:'A quiet footer link opens a collection of useful third-party tools.',path:'bookmarks/'}]}
