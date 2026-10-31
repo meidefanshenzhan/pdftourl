@@ -4,11 +4,11 @@ const fail=()=>{throw Error('AI_BUDGET');};
 function limit(env){const x=Number(env.AI_DAILY_BUDGET_NEURONS??8000);return Number.isFinite(x)&&x>=0?Math.min(8000,x):0;}
 const manualPause=env=>env.AI_PAUSED===true||env.AI_PAUSED==='true';
 export async function initBudget(env,now=Date.now()){
- const day=budgetDay(now),cap=Math.floor(limit(env)*1000),start=Date.parse(day+'T00:00:00Z');
+ const day=budgetDay(now),cap=Math.floor(limit(env)*1000),start=Date.parse(day+'T00:00:00Z'),legacyStart=env.AI_LEGACY_ACK_DAY===day?now+1:start;
  await env.DB.prepare("UPDATE ai_budget_calls SET state='unknown',finished=? WHERE state='reserved' AND created<?").bind(now,now-600000).run();
- // Never bootstrap unknown earlier usage as zero. Existing unmetered jobs pause this window.
- await env.DB.prepare("INSERT OR IGNORE INTO ai_budget_days(day,limit_milli,spent_milli,paused,reason) SELECT ?,?,CASE WHEN EXISTS(SELECT 1 FROM subtitle_jobs j WHERE budget_managed=0 AND created>=? AND created<? AND NOT EXISTS(SELECT 1 FROM ai_budget_calls c WHERE c.job=j.id)) THEN ? ELSE 0 END,CASE WHEN EXISTS(SELECT 1 FROM subtitle_jobs j WHERE budget_managed=0 AND created>=? AND created<? AND NOT EXISTS(SELECT 1 FROM ai_budget_calls c WHERE c.job=j.id)) THEN 1 ELSE 0 END,CASE WHEN EXISTS(SELECT 1 FROM subtitle_jobs j WHERE budget_managed=0 AND created>=? AND created<? AND NOT EXISTS(SELECT 1 FROM ai_budget_calls c WHERE c.job=j.id)) THEN 'LEGACY_USAGE_UNKNOWN' ELSE NULL END").bind(day,cap,start,now,cap,start,now,start,now).run();
- await env.DB.prepare("UPDATE ai_budget_days SET paused=1,reason='LEGACY_USAGE_UNKNOWN' WHERE day=? AND EXISTS(SELECT 1 FROM subtitle_jobs WHERE budget_managed=0 AND created>=? AND created<?)").bind(day,start,now).run();
+ // Unknown legacy usage normally pauses this window. A dated owner acknowledgement may suppress that pause; historical allowance is booked separately.
+ await env.DB.prepare("INSERT OR IGNORE INTO ai_budget_days(day,limit_milli,spent_milli,paused,reason) SELECT ?,?,CASE WHEN EXISTS(SELECT 1 FROM subtitle_jobs j WHERE budget_managed=0 AND created>=? AND created<? AND NOT EXISTS(SELECT 1 FROM ai_budget_calls c WHERE c.job=j.id)) THEN ? ELSE 0 END,CASE WHEN EXISTS(SELECT 1 FROM subtitle_jobs j WHERE budget_managed=0 AND created>=? AND created<? AND NOT EXISTS(SELECT 1 FROM ai_budget_calls c WHERE c.job=j.id)) THEN 1 ELSE 0 END,CASE WHEN EXISTS(SELECT 1 FROM subtitle_jobs j WHERE budget_managed=0 AND created>=? AND created<? AND NOT EXISTS(SELECT 1 FROM ai_budget_calls c WHERE c.job=j.id)) THEN 'LEGACY_USAGE_UNKNOWN' ELSE NULL END").bind(day,cap,legacyStart,now,cap,legacyStart,now,legacyStart,now).run();
+ await env.DB.prepare("UPDATE ai_budget_days SET paused=1,reason='LEGACY_USAGE_UNKNOWN' WHERE day=? AND EXISTS(SELECT 1 FROM subtitle_jobs WHERE budget_managed=0 AND created>=? AND created<?)").bind(day,legacyStart,now).run();
  await env.DB.prepare('UPDATE ai_budget_days SET limit_milli=MIN(limit_milli,?) WHERE day=?').bind(cap,day).run();
  return day;
 }

@@ -15,7 +15,8 @@
   "vars": {
     "AWS_REGION": "us-east-2",
     "S3_BUCKET": "pdftourl.online",
-    "AI_DAILY_BUDGET_NEURONS": "8000"
+    "AI_DAILY_BUDGET_NEURONS": "8000",
+    "AI_LEGACY_ACK_DAY": "2026-10-31"
   },
   "d1_databases": [
     {
