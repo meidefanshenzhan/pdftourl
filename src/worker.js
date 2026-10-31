@@ -1,3 +1,4 @@
+import {handleSubtitles} from './subtitles.js';
 import {seoHashes} from './seo-hashes.js';
 import {MAX_BYTES,validatePdf,makeObjectKey,sha256,readLimited} from './core.js';
 import {createSession,validSession,sessionCookie,cookie,samePassword} from './auth.js';
@@ -9,6 +10,7 @@ const json=(data,status=200,headers={})=>Response.json(data,{status,headers:{'Ca
 const text=(f,k)=>String(f.get(k)||'').trim().slice(0,120);
 async function serve(req,env,visitor){
  const url=new URL(req.url),path=url.pathname;
+ if(path.startsWith('/api/subtitles/'))return handleSubtitles(req,env,visitor);
  const unlocked=await validSession(sessionCookie(req),env.SESSION_SECRET+visitor.id);
  if(path==='/api/session'&&req.method==='GET')return json({unlocked,freeRemaining:await remainingUploads(env,visitor.id)});
  if(path==='/api/unlock'&&req.method==='POST'){
@@ -75,7 +77,7 @@ export default {async fetch(req,env){
    const r=await env.ASSETS.fetch(req);const h=new Headers(r.headers);
    h.set('X-Content-Type-Options','nosniff');h.set('Referrer-Policy','strict-origin-when-cross-origin');
    const formAction=path.includes('/contact/')?"'self' https://formsubmit.co":"'self'";
-   h.set('Content-Security-Policy',"default-src 'self'; script-src 'self' "+seoHashes+"; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action "+formAction);
+   h.set('Content-Security-Policy',"default-src 'self'; script-src 'self' https://www.googletagmanager.com "+seoHashes+"; style-src 'self'; media-src 'self' blob:; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action "+formAction);
    return new Response(r.body,{status:r.status,headers:h});
   }
   if(!['GET','HEAD'].includes(req.method)&&req.headers.get('origin')&&req.headers.get('origin')!==url.origin)return json({error:'ORIGIN'},403);

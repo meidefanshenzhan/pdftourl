@@ -36,5 +36,8 @@
       "pattern": "www.kjamz.com",
       "custom_domain": true
     }
-  ]
+  ],
+  "ai": {
+    "binding": "AI"
+  }
 }

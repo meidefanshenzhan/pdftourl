@@ -1,5 +1,9 @@
 // Add actual shipped changes here, newest first. Dates are publication dates.
 export const releaseNotes=[{
+ date:'2026-10-31',version:'1.5.0',id:'2026-10-31-auto-subtitles',
+ zh:{title:'自动字幕工具上线',items:[{text:'短视频自动识别带时间轴的字幕，可编辑文字与时间、翻译为所选语言，预览并导出原文、译文或双语 SRT / VTT。',path:'auto-subtitles/'}]},
+ en:{title:'Auto Subtitles launched',items:[{text:'Generate timed subtitles for short videos, edit text and timings, translate to a selected language, preview and export original, translated or bilingual SRT / VTT.',path:'auto-subtitles/'}]}
+},{
  date:'2026-10-29',version:'1.4.0',id:'2026-10-29-advertising-calculator',
  zh:{title:'广告盈亏计算器上线',items:[{text:'输入售价、单件费用与转化率，测算盈亏平衡 ACOS、CPC 上限和广告后利润，支持目标利润与导出。',path:'acos-calculator/'}]},
  en:{title:'Advertising Calculator launched',items:[{text:'Calculate break-even ACOS, CPC limits and profit after ads from unit costs and conversion rate, with profit targets and exports.',path:'acos-calculator/'}]}
