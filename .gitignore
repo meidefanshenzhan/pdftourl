@@ -5,3 +5,4 @@
 node_modules/
 .wrangler/
 dist/
+public/assets/video-engine-v1/

@@ -1,5 +1,9 @@
 // Add actual shipped changes here, newest first. Dates are publication dates.
 export const releaseNotes=[{
+ date:'2026-10-31',version:'1.5.1',id:'2026-10-31-subtitled-video-export',
+ zh:{title:'支持导出带字幕的视频',items:[{text:'可将编辑后的原文、译文或双语字幕合成进 MP4，保留视频画面和声音；纯音频支持生成纯色背景的字幕视频，提供进度和取消。',path:'auto-subtitles/'}]},
+ en:{title:'Export videos with burned-in subtitles',items:[{text:'Render edited original, translated or bilingual captions into MP4 locally, keeping video frames and audio. Audio-only inputs get a solid background, with progress and cancellation.',path:'auto-subtitles/'}]}
+},{
  date:'2026-10-31',version:'1.5.0',id:'2026-10-31-auto-subtitles',
  zh:{title:'自动字幕工具上线',items:[{text:'短视频自动识别带时间轴的字幕，可编辑文字与时间、翻译为所选语言，预览并导出原文、译文或双语 SRT / VTT。',path:'auto-subtitles/'}]},
  en:{title:'Auto Subtitles launched',items:[{text:'Generate timed subtitles for short videos, edit text and timings, translate to a selected language, preview and export original, translated or bilingual SRT / VTT.',path:'auto-subtitles/'}]}
