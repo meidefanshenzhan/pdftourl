@@ -13,3 +13,8 @@ Object.assign(subtitleCopy.zh,{accessSummary:'有密令？',accessLabel:'输入�
 Object.assign(subtitleCopy.en,{accessSummary:'Have an access code?',accessLabel:'Access code',accessButton:'Unlock access',accessHint:'Unlocks access for one hour. Shared processing limits still apply.',accessActive:'Access code active · shared limits still apply',moreUsage:'Need more generations? Contact us',accessSuccess:'Access unlocked. You can continue generating subtitles.'});
 Object.assign(subtitleCopy.zh.errors,{PASSWORD:'密令不正确，请检查后重试。',RATE:'尝试次数较多，请稍后再试。',NOT_CONFIGURED:'密令暂不可用，请联系我们。'});
 Object.assign(subtitleCopy.en.errors,{PASSWORD:'Incorrect access code. Check it and try again.',RATE:'Too many attempts. Please try later.',NOT_CONFIGURED:'Access codes are temporarily unavailable. Please contact us.'});
+
+Object.assign(subtitleCopy.zh,{budgetPaused:'在线字幕处理暂时暂停。已有字幕仍可编辑和导出视频；请稍后再试或联系我们。'});
+Object.assign(subtitleCopy.en,{budgetPaused:'Online subtitle processing is temporarily paused. You can still edit existing subtitles and export videos. Try later or contact us.'});
+subtitleCopy.zh.errors.AI_BUDGET='当前处理额度不足，已暂停新的识别或翻译。已有字幕仍可编辑和导出，密令不能绕过此限制。';
+subtitleCopy.en.errors.AI_BUDGET='Processing capacity is insufficient, so new transcription or translation is paused. Existing subtitles can still be edited and exported; access codes do not bypass this limit.';

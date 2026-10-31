@@ -14,7 +14,8 @@
   },
   "vars": {
     "AWS_REGION": "us-east-2",
-    "S3_BUCKET": "pdftourl.online"
+    "S3_BUCKET": "pdftourl.online",
+    "AI_DAILY_BUDGET_NEURONS": "8000"
   },
   "d1_databases": [
     {
@@ -39,5 +40,6 @@
   ],
   "ai": {
     "binding": "AI"
-  }
+  },
+  "keep_vars": true
 }

@@ -1,5 +1,9 @@
 // Add actual shipped changes here, newest first. Dates are publication dates.
 export const releaseNotes=[{
+ date:'2026-10-31',version:'1.5.3',id:'2026-10-31-subtitle-ai-budget',
+ zh:{title:'字幕处理加入预算暂停保护',items:[{text:'识别和翻译先预留处理额度，额度不足时暂停新任务，密令也不能绕过；已有字幕的编辑和视频导出保持可用。',path:'auto-subtitles/'}]},
+ en:{title:'Subtitle processing budget protection',items:[{text:'Transcription and translation reserve processing capacity before each call. New jobs pause when capacity is insufficient, including access-code users; existing subtitle editing and video exports remain available.',path:'auto-subtitles/'}]}
+},{
  date:'2026-10-31',version:'1.5.2',id:'2026-10-31-subtitle-access-code',
  zh:{title:'字幕工具支持密令解锁',items:[{text:'新增密令入口，可解锁 1 小时继续生成字幕；全站处理额度保护保留，更多使用需求可直接联系留言。',path:'auto-subtitles/'}]},
  en:{title:'Subtitle access codes added',items:[{text:'Unlock subtitle generation for one hour with an access code. Shared processing limits remain, with a contact link for additional usage requests.',path:'auto-subtitles/'}]}
