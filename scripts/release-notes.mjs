@@ -1,5 +1,9 @@
 // Add actual shipped changes here, newest first. Dates are publication dates.
 export const releaseNotes=[{
+ date:'2026-10-31',version:'1.5.2',id:'2026-10-31-subtitle-access-code',
+ zh:{title:'字幕工具支持密令解锁',items:[{text:'新增密令入口，可解锁 1 小时继续生成字幕；全站处理额度保护保留，更多使用需求可直接联系留言。',path:'auto-subtitles/'}]},
+ en:{title:'Subtitle access codes added',items:[{text:'Unlock subtitle generation for one hour with an access code. Shared processing limits remain, with a contact link for additional usage requests.',path:'auto-subtitles/'}]}
+},{
  date:'2026-10-31',version:'1.5.1',id:'2026-10-31-subtitled-video-export',
  zh:{title:'支持导出带字幕的视频',items:[{text:'可将编辑后的原文、译文或双语字幕合成进 MP4，保留视频画面和声音；纯音频支持生成纯色背景的字幕视频，提供进度和取消。',path:'auto-subtitles/'}]},
  en:{title:'Export videos with burned-in subtitles',items:[{text:'Render edited original, translated or bilingual captions into MP4 locally, keeping video frames and audio. Audio-only inputs get a solid background, with progress and cancellation.',path:'auto-subtitles/'}]}
