@@ -1,5 +1,9 @@
 // Add actual shipped changes here, newest first. Dates are publication dates.
 export const releaseNotes=[{
+ date:'2026-10-31',version:'1.8.0',id:'2026-10-31-keyword-coverage',
+ zh:{title:'Listing 关键词覆盖检查上线',items:[{text:'对照目标词表检查标题、五点、详情和后台搜索词，支持短语／同字段全部词匹配、遗漏词筛选、高亮预览及 CSV / TXT 导出。',path:'keyword-coverage-checker/'}]},
+ en:{title:'Listing Keyword Coverage Checker launched',items:[{text:'Check target keywords against title, bullets, description and backend terms, with phrase or same-field all-word matching, missing-keyword filters, highlights and CSV / TXT exports.',path:'keyword-coverage-checker/'}]}
+},{
  date:'2026-10-31',version:'1.7.0',id:'2026-10-31-image-compressor',
  zh:{title:'批量图片压缩上线',items:[{text:'本地批量处理 JPG、PNG、WebP，调节画质与最长边，预览处理前后体积，支持单张下载与 ZIP 打包。',path:'image-compressor/'}]},
  en:{title:'Image Compressor launched',items:[{text:'Batch process JPG, PNG and WebP locally, adjust quality and maximum dimensions, compare file sizes and download individually or as a ZIP.',path:'image-compressor/'}]}
