@@ -77,8 +77,9 @@ export default {async fetch(req,env){
    const r=await env.ASSETS.fetch(req);const h=new Headers(r.headers);
    h.set('X-Content-Type-Options','nosniff');h.set('Referrer-Policy','strict-origin-when-cross-origin');
    const videoPolicy=path.includes('/auto-subtitles/')||path.startsWith('/assets/video-engine-v1/');
+   const imagePolicy=/^\/(zh|en)\/image-compressor\/(?:index\.html)?$/.test(path);
    const formAction=path.includes('/contact/')?"'self' https://formsubmit.co":"'self'";
-   h.set('Content-Security-Policy',"default-src 'self'; script-src 'self' https://www.googletagmanager.com "+(videoPolicy?"'wasm-unsafe-eval' ":'')+seoHashes+"; style-src 'self'; media-src 'self' blob:; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; connect-src 'self' blob: https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; worker-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action "+formAction);
+   h.set('Content-Security-Policy',"default-src 'self'; script-src 'self' https://www.googletagmanager.com "+(videoPolicy?"'wasm-unsafe-eval' ":'')+seoHashes+"; style-src 'self'; media-src 'self' blob:; img-src 'self' data: "+(imagePolicy?'blob: ':'')+"https://*.google-analytics.com https://www.googletagmanager.com; connect-src 'self' blob: https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; worker-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action "+formAction);
    return new Response(r.body,{status:r.status,headers:h});
   }
   if(!['GET','HEAD'].includes(req.method)&&req.headers.get('origin')&&req.headers.get('origin')!==url.origin)return json({error:'ORIGIN'},403);

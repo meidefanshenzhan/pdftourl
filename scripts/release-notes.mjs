@@ -1,5 +1,9 @@
 // Add actual shipped changes here, newest first. Dates are publication dates.
 export const releaseNotes=[{
+ date:'2026-10-31',version:'1.7.0',id:'2026-10-31-image-compressor',
+ zh:{title:'批量图片压缩上线',items:[{text:'本地批量处理 JPG、PNG、WebP，调节画质与最长边，预览处理前后体积，支持单张下载与 ZIP 打包。',path:'image-compressor/'}]},
+ en:{title:'Image Compressor launched',items:[{text:'Batch process JPG, PNG and WebP locally, adjust quality and maximum dimensions, compare file sizes and download individually or as a ZIP.',path:'image-compressor/'}]}
+},{
  date:'2026-10-31',version:'1.6.0',id:'2026-10-31-keyword-filter',
  zh:{title:'关键词过滤工具上线',items:[{text:'删除指定词与短语，或按关键词保留、排除整行；支持大小写、整词及任意词／全部词匹配，提供 TXT / CSV 导出。',path:'remove-words-from-text/'}]},
  en:{title:'Keyword Filter launched',items:[{text:'Remove specific words and phrases, or keep and exclude matching lines, with case, whole-word and any/all options plus TXT / CSV exports.',path:'remove-words-from-text/'}]}
