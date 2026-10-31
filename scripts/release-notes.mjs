@@ -1,5 +1,9 @@
 // Add actual shipped changes here, newest first. Dates are publication dates.
 export const releaseNotes=[{
+ date:'2026-10-31',version:'1.6.0',id:'2026-10-31-keyword-filter',
+ zh:{title:'关键词过滤工具上线',items:[{text:'删除指定词与短语，或按关键词保留、排除整行；支持大小写、整词及任意词／全部词匹配，提供 TXT / CSV 导出。',path:'remove-words-from-text/'}]},
+ en:{title:'Keyword Filter launched',items:[{text:'Remove specific words and phrases, or keep and exclude matching lines, with case, whole-word and any/all options plus TXT / CSV exports.',path:'remove-words-from-text/'}]}
+},{
  date:'2026-10-31',version:'1.5.3',id:'2026-10-31-subtitle-ai-budget',
  zh:{title:'字幕处理加入预算暂停保护',items:[{text:'识别和翻译先预留处理额度，额度不足时暂停新任务，密令也不能绕过；已有字幕的编辑和视频导出保持可用。',path:'auto-subtitles/'}]},
  en:{title:'Subtitle processing budget protection',items:[{text:'Transcription and translation reserve processing capacity before each call. New jobs pause when capacity is insufficient, including access-code users; existing subtitle editing and video exports remain available.',path:'auto-subtitles/'}]}

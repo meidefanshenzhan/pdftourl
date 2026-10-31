@@ -7,7 +7,7 @@
     "test": "node --test tests/*.test.mjs",
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
-    "build": "node scripts/build-pages.mjs && node scripts/build-home.mjs && node scripts/build-word-counter.mjs && node scripts/build-text-dedupe.mjs && node scripts/build-word-merge.mjs && node scripts/build-acos.mjs && node scripts/build-changelog.mjs && node scripts/build-bookmarks.mjs && node scripts/build-video-engine.mjs && node scripts/build-subtitles.mjs && node scripts/build-seo.mjs",
+    "build": "node scripts/build-pages.mjs && node scripts/build-home.mjs && node scripts/build-word-counter.mjs && node scripts/build-text-dedupe.mjs && node scripts/build-keyword-filter.mjs && node scripts/build-word-merge.mjs && node scripts/build-acos.mjs && node scripts/build-changelog.mjs && node scripts/build-bookmarks.mjs && node scripts/build-video-engine.mjs && node scripts/build-subtitles.mjs && node scripts/build-seo.mjs",
     "check:geo": "node scripts/check-geo.mjs"
   },
   "dependencies": {
