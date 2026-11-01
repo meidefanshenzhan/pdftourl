@@ -1,5 +1,9 @@
 // Add actual shipped changes here, newest first. Dates are publication dates.
 export const releaseNotes=[{
+ date:'2026-11-01',version:'1.9.0',id:'2026-11-01-text-compare',
+ zh:{title:'文本对比工具上线',items:[{text:'按行或按词对比两份文案，支持忽略大小写与空白、高亮新增删除、跳转差异以及复制／TXT 导出报告。',path:'text-compare/'}]},
+ en:{title:'Text Compare launched',items:[{text:'Compare text by line or word, with case and whitespace options, addition/deletion highlights, change navigation and copyable TXT reports.',path:'text-compare/'}]}
+},{
  date:'2026-10-31',version:'1.8.0',id:'2026-10-31-keyword-coverage',
  zh:{title:'Listing 关键词覆盖检查上线',items:[{text:'对照目标词表检查标题、五点、详情和后台搜索词，支持短语／同字段全部词匹配、遗漏词筛选、高亮预览及 CSV / TXT 导出。',path:'keyword-coverage-checker/'}]},
  en:{title:'Listing Keyword Coverage Checker launched',items:[{text:'Check target keywords against title, bullets, description and backend terms, with phrase or same-field all-word matching, missing-keyword filters, highlights and CSV / TXT exports.',path:'keyword-coverage-checker/'}]}

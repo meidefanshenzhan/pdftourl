@@ -7,6 +7,7 @@ export const sitePages=['zh','en'].flatMap(lang=>[
  {path:`/${lang}/remove-words-from-text/`,lang,type:'filter'},
  {path:`/${lang}/image-compressor/`,lang,type:'image'},
  {path:`/${lang}/keyword-coverage-checker/`,lang,type:'coverage'},
+ {path:`/${lang}/text-compare/`,lang,type:'compare'},
  {path:`/${lang}/acos-calculator/`,lang,type:'acos'},
  {path:`/${lang}/auto-subtitles/`,lang,type:'subtitles'},
  {path:`/${lang}/changelog/`,lang,type:'changelog'},
