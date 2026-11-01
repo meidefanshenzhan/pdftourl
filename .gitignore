@@ -6,3 +6,5 @@ node_modules/
 .wrangler/
 dist/
 public/assets/video-engine-v1/
+
+public/assets/pdf-engine-v1/

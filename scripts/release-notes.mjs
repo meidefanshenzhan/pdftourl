@@ -1,5 +1,9 @@
 // Add actual shipped changes here, newest first. Dates are publication dates.
 export const releaseNotes=[{
+ date:'2026-11-01',version:'1.10.0',id:'2026-11-01-image-to-pdf',
+ zh:{title:'图片转 PDF 工具上线',items:[{text:'本地合并多张 JPG、PNG、WebP 为 PDF，支持排序、旋转、纸张方向、边距、完整显示／裁切和预览下载。',path:'image-to-pdf/'}]},
+ en:{title:'Image to PDF launched',items:[{text:'Combine JPG, PNG and WebP locally into a PDF, with order, rotation, paper orientation, margins, contain/cover and preview/download controls.',path:'image-to-pdf/'}]}
+},{
  date:'2026-11-01',version:'1.9.0',id:'2026-11-01-text-compare',
  zh:{title:'文本对比工具上线',items:[{text:'按行或按词对比两份文案，支持忽略大小写与空白、高亮新增删除、跳转差异以及复制／TXT 导出报告。',path:'text-compare/'}]},
  en:{title:'Text Compare launched',items:[{text:'Compare text by line or word, with case and whitespace options, addition/deletion highlights, change navigation and copyable TXT reports.',path:'text-compare/'}]}
