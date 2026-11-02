@@ -1,5 +1,5 @@
 // Add actual shipped changes here, newest first. Dates are publication dates.
-export const releaseNotes=[{
+export const releaseNotes=[{date:'2026-11-03',version:'1.11.0',id:'2026-11-03-image-url',zh:{title:'图片转链接上线',items:[{text:'上传 JPG、PNG、WebP 生成图片直链，支持 URL、Markdown、HTML 复制及图片删除，每日免费 10 张，密令可继续上传。',path:'image-url/'}]},en:{title:'Image to URL launched',items:[{text:'Upload JPG, PNG and WebP for direct image links, copy URL, Markdown or HTML and manage deletions. Includes 10 free images daily and access-code unlocking.',path:'image-url/'}]}},{
  date:'2026-11-01',version:'1.10.0',id:'2026-11-01-image-to-pdf',
  zh:{title:'图片转 PDF 工具上线',items:[{text:'本地合并多张 JPG、PNG、WebP 为 PDF，支持排序、旋转、纸张方向、边距、完整显示／裁切和预览下载。',path:'image-to-pdf/'}]},
  en:{title:'Image to PDF launched',items:[{text:'Combine JPG, PNG and WebP locally into a PDF, with order, rotation, paper orientation, margins, contain/cover and preview/download controls.',path:'image-to-pdf/'}]}

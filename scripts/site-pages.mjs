@@ -9,6 +9,7 @@ export const sitePages=['zh','en'].flatMap(lang=>[
  {path:`/${lang}/keyword-coverage-checker/`,lang,type:'coverage'},
  {path:`/${lang}/text-compare/`,lang,type:'compare'},
  {path:`/${lang}/image-to-pdf/`,lang,type:'imagePdf'},
+ {path:`/${lang}/image-url/`,lang,type:'imageUrl'},
  {path:`/${lang}/acos-calculator/`,lang,type:'acos'},
  {path:`/${lang}/auto-subtitles/`,lang,type:'subtitles'},
  {path:`/${lang}/changelog/`,lang,type:'changelog'},
