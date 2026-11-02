@@ -22,7 +22,7 @@ export async function handleImages(req,e,v){
  data=await readLimited(req,IMAGE_MAX);const info=validateImage(data),ext={'image/jpeg':'jpg','image/png':'png','image/webp':'webp'}[info.mime];
  if(!unlocked){slot=await bump(e,daily,10);if(!slot)return json({error:'LIMIT'},429);}
  const capacity=await e.DB.prepare('UPDATE image_usage SET bytes=bytes+? WHERE id=1 AND paused=0 AND bytes+?<=?').bind(data.length,data.length,IMAGE_CAP).run();if(!capacity.meta.changes)return json({error:'CAPACITY'},409);reserved=true;
- id=crypto.randomUUID()+'.'+ext;key='image-url/'+id;
+ id=crypto.randomUUID()+'.'+ext;key=id;
  const name=(req.headers.get('X-Image-Name')||'image').slice(0,600);let decoded;try{decoded=decodeURIComponent(name).slice(0,200);}catch{decoded='image.'+ext;}
  await e.DB.prepare('INSERT INTO hosted_images(id,owner_id,object_key,name,size,mime,width,height,created_at) VALUES(?,?,?,?,?,?,?,?,?)').bind(id,v.id,key,decoded,data.length,info.mime,info.width,info.height,new Date().toISOString()).run();row=true;
  // Set before awaiting: a failed response may still have stored the object.
